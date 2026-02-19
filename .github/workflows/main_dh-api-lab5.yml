@@ -24,7 +24,7 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build Maintenance.WebAPI/Maintenance.WebAPI.csproj.csproj--configuration Release
+        run: dotnet build Maintenance.WebAPI/Maintenance.WebAPI.csproj --configuration Release
 
       - name: dotnet publish
         run: dotnet publish Maintenance.WebAPI/Maintenance.WebAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
@@ -54,3 +54,4 @@ jobs:
           package: .
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A87D7C8E0B1146A8B85D4A2F9A559648 }}
+
