@@ -4,8 +4,8 @@ namespace Maintenance.WebAPI.Services
 {
     public class FakeRepairHistoryService : IRepairHistoryService
     {
-            private readonly List<RepairHistoryDto> _repairs = new List<RepairHistoryDto>
-            {
+        private readonly List<RepairHistoryDto> _repairs = new List<RepairHistoryDto>
+        {
             new RepairHistoryDto
             {
                 Id = 1,
@@ -26,35 +26,16 @@ namespace Maintenance.WebAPI.Services
             }
         };
 
-            public List<RepairHistoryDto> GetByVehicleId(int vehicleId)
-            {
-                return _repairs.Where(r => r.VehicleId == vehicleId).ToList();
-            }
+        public List<RepairHistoryDto> GetByVehicleId(int vehicleId)
+        {
+            return _repairs.Where(r => r.VehicleId == vehicleId).ToList();
+        }
 
-            public List<RepairHistoryDto> GetRepairHistory(int vehicleId)
-            {
-                return _repairs.Where(r => r.VehicleId == vehicleId).ToList();
-            }
-
-            public RepairHistoryDto AddRepair(RepairHistoryDto repair)
-            {
-                repair.Id = _repairs.Any() ? _repairs.Max(r => r.Id) + 1 : 1;
-
-            
-                if (repair.RepairDate == default)
-                    repair.RepairDate = DateTime.Now;
-
-                _repairs.Add(repair);
-                return repair;
-            }
+        public RepairHistoryDto AddRepair(RepairHistoryDto repair)
+        {
+            repair.Id = _repairs.Count + 1;
+            _repairs.Add(repair);
+            return repair;
         }
     }
-
-
-
-
-
-
-
-
-
+}

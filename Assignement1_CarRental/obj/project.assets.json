@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy\\Assignement1_CarRental\\Assignement1_CarRental.csproj",
+      "projectUniqueName": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\Assignement1_CarRental\\Assignement1_CarRental.csproj",
       "projectName": "Assignement1_CarRental",
-      "projectPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy\\Assignement1_CarRental\\Assignement1_CarRental.csproj",
+      "projectPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\Assignement1_CarRental\\Assignement1_CarRental.csproj",
       "packagesPath": "C:\\Users\\dizza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy\\Assignement1_CarRental\\obj\\",
+      "outputPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\Assignement1_CarRental\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dizza\\AppData\\Roaming\\NuGet\\NuGet.Config",

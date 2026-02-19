@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JRtJhzlg46I=",
+  "dgSpecHash": "wMfnH9ktGvQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy\\Maintenance.WebAPI\\Maintenance.WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\Maintenance.WebAPI\\Maintenance.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dizza\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\dizza\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

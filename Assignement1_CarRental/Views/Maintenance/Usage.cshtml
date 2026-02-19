@@ -1,0 +1,17 @@
+﻿@model Assignement1_CarRental.Models.UsageViewModel
+
+<h2>API Usage Tracker</h2>
+
+<div class="card" style="max-width: 400px; padding: 20px; margin-top: 20px;">
+    <table class="table">
+        <tr>
+            <td><strong>Client ID</strong></td>
+            <td>@Model.ClientId</td>
+        </tr>
+        <tr>
+            <td><strong>Call Count</strong></td>
+            <td>@Model.CallCount</td>
+        </tr>
+    </table>
+    <a href="/Maintenance/Usage" class="btn btn-primary">Refresh</a>
+</div>
