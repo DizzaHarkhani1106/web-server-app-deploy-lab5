@@ -19,13 +19,34 @@ builder.Services.AddDbContext<MaintenanceWebAPIContext>(options =>
 // =======================================
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("ApiKey", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "X-Api-Key",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Description = "Enter your API key"
+    });
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "ApiKey"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
 builder.Services.AddScoped<IRepairHistoryService, FakeRepairHistoryService>();
-
-// ✅ Needed for MaintenanceController's IHttpClientFactory
 builder.Services.AddHttpClient("MaintenanceApi", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7113/"); 
+    client.BaseAddress = new Uri("https://localhost:7113/");
     client.DefaultRequestHeaders.Add("X-Api-Key", "MY_SECRET_KEY_123");
 });
 
@@ -52,7 +73,6 @@ app.Use(async (context, next) =>
     }
     catch (Exception ex)
     {
-        
         context.Response.StatusCode = 500;
         context.Response.ContentType = "application/json";
         await context.Response.WriteAsJsonAsync(new
@@ -78,7 +98,6 @@ app.Use(async (context, next) =>
     }
     await next();
 });
-
 
 app.UseAuthorization();
 app.MapControllers();
