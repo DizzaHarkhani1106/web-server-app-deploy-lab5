@@ -5,18 +5,13 @@ using System.Collections.Concurrent;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// =======================================
-// Database
-// =======================================
 builder.Services.AddDbContext<MaintenanceWebAPIContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("MaintenanceWebAPIContext")
         ?? throw new InvalidOperationException("Connection string not found.")
     ));
 
-// =======================================
-// Services
-// =======================================
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -50,17 +45,12 @@ builder.Services.AddHttpClient("MaintenanceApi", client =>
     client.DefaultRequestHeaders.Add("X-Api-Key", "MY_SECRET_KEY_123");
 });
 
-// =======================================
-// PART 3 – Stateful (ConcurrentDictionary per reference doc)
-// =======================================
 var usageCounts = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
 builder.Services.AddSingleton(usageCounts);
 
 var app = builder.Build();
 
-// =======================================
-// Swagger
-// =======================================
+
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();

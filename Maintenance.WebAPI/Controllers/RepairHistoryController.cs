@@ -20,9 +20,7 @@ namespace Maintenance.WebAPI.Controllers
             _usageCounts = usageCounts;
         }
 
-        // ============================================
-        // GET: api/RepairHistory/vehicles/{vehicleId}
-        // ============================================
+       
         [HttpGet("vehicles/{vehicleId}")]
         public IActionResult GetRepairHistory(int vehicleId)
         {
@@ -30,10 +28,7 @@ namespace Maintenance.WebAPI.Controllers
             return Ok(history);
         }
 
-        // ============================================
-        // POST: api/RepairHistory
-        // With Validation (400 errors)
-        // ============================================
+  
         [HttpPost]
         public IActionResult AddRepair([FromBody] RepairHistoryDto repair)
         {
@@ -64,26 +59,19 @@ namespace Maintenance.WebAPI.Controllers
                 });
             }
 
-            // Fake service does not store, so just return Ok
+            
             return Ok(repair);
         }
 
-        // ============================================
-        // GET: api/RepairHistory/crash
-        // Force 500 error
-        // ============================================
         [HttpGet("crash")]
         public IActionResult Crash()
         {
             int x = 0;
-            int y = 5 / x; // Divide by zero exception
+            int y = 5 / x; 
             return Ok();
         }
 
-        // ============================================
-        // GET: api/RepairHistory/usage
-        // Stateful behavior
-        // ============================================
+
         [HttpGet("usage")]
         public IActionResult Usage()
         {
