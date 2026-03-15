@@ -16,7 +16,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseMiddleware<WebApiGateway.ApiKeyMiddleware>();
 
 app.UseAuthorization();
 
