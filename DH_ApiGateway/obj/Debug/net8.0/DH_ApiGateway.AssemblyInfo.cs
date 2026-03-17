@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DH_ApiGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20ef7e3165decbccd371cfd5166975cd6c46c8e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+255852d9726fb277d309e16bba9290bf0ce42da6")]
 [assembly: System.Reflection.AssemblyProductAttribute("DH_ApiGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DH_ApiGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
