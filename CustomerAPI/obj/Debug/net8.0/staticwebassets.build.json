@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "q7zU+pwBTlA3jbDCTXSWZEOsNRxNY47tnoR/h7s+Nyo=",
+  "Hash": "Wq8Z+6LGUwr9XNwuRXdymfcudNBsxAs6BaPf7IIluI4=",
   "Source": "CustomerAPI",
   "BasePath": "_content/CustomerAPI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\DH_ApiGateway\\DH_ApiGateway.csproj",
+      "Version": 2,
+      "Source": "DH_ApiGateway",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }
