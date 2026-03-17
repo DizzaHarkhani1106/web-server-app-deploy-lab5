@@ -1,26 +1,16 @@
+using Assignement1_CarRental.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddHttpClient("MaintenanceApi", (sp, client) =>
-{
-    var config = sp.GetRequiredService<IConfiguration>();
-    client.BaseAddress = new Uri(config["MaintenanceApi:LocalUrl"]!);
-    client.DefaultRequestHeaders.Add("X-Api-Key", "MY_SECRET_KEY_123");
-});
-
-builder.Services.AddHttpClient("InventoryApi", (sp, client) =>
-{
-    client.BaseAddress = new Uri("https://localhost:7267");
-});
-
-builder.Services.AddHttpClient("CustomerApi", (sp, client) =>
-{
-    client.BaseAddress = new Uri("https://localhost:7247");
-});
+builder.Services.AddHttpClient<IApiGatewayClient, ApiGatewayClient>();
+builder.Services.AddScoped<IApiGatewayClient, ApiGatewayClient>();
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -29,7 +19,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
