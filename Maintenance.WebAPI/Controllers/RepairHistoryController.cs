@@ -63,15 +63,6 @@ namespace Maintenance.WebAPI.Controllers
             return Ok(repair);
         }
 
-        [HttpGet("crash")]
-        public IActionResult Crash()
-        {
-            int x = 0;
-            int y = 5 / x; 
-            return Ok();
-        }
-
-
         [HttpGet("usage")]
         public IActionResult Usage()
         {

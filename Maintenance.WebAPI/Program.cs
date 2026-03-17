@@ -11,7 +11,6 @@ builder.Services.AddDbContext<MaintenanceWebAPIContext>(options =>
         ?? throw new InvalidOperationException("Connection string not found.")
     ));
 
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -38,11 +37,12 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
 builder.Services.AddScoped<IRepairHistoryService, FakeRepairHistoryService>();
 builder.Services.AddHttpClient("MaintenanceApi", client =>
 {
     client.BaseAddress = new Uri("https://localhost:7113/");
-    client.DefaultRequestHeaders.Add("X-Api-Key", "MY_SECRET_KEY_123");
+    client.DefaultRequestHeaders.Add("X-Api-Key", "car-rental-secret-key-12345");  // ← Updated to match gateway
 });
 
 var usageCounts = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
@@ -50,11 +50,11 @@ builder.Services.AddSingleton(usageCounts);
 
 var app = builder.Build();
 
-
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
+// Error handling middleware
 app.Use(async (context, next) =>
 {
     try
@@ -71,22 +71,6 @@ app.Use(async (context, next) =>
             message = "An unexpected error occurred."
         });
     }
-});
-
-const string API_KEY = "MY_SECRET_KEY_123";
-app.Use(async (context, next) =>
-{
-    if (!context.Request.Headers.TryGetValue("X-Api-Key", out var key) || key != API_KEY)
-    {
-        context.Response.StatusCode = 401;
-        await context.Response.WriteAsJsonAsync(new
-        {
-            error = "Unauthorized",
-            message = "Missing or invalid API key."
-        });
-        return;
-    }
-    await next();
 });
 
 app.MapControllers();
