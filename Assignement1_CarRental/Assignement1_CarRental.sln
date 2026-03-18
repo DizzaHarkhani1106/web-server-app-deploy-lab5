@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerAPI", "..\CustomerA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DH_ApiGateway", "..\DH_ApiGateway\DH_ApiGateway.csproj", "{BDF9D596-4340-40C7-BE1C-207EB7498BAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DH_GlobalExceptionHandler", "..\DH_GlobalExceptionHandler\DH_GlobalExceptionHandler.csproj", "{2E0218C7-C4F7-4BC2-929F-CBD5658A1823}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{BDF9D596-4340-40C7-BE1C-207EB7498BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF9D596-4340-40C7-BE1C-207EB7498BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDF9D596-4340-40C7-BE1C-207EB7498BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0218C7-C4F7-4BC2-929F-CBD5658A1823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0218C7-C4F7-4BC2-929F-CBD5658A1823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0218C7-C4F7-4BC2-929F-CBD5658A1823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0218C7-C4F7-4BC2-929F-CBD5658A1823}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{B1C3A0AE-46C5-4662-B5CB-A6AC5D15DE72} = {FC9F6051-A8CC-437D-8C02-CD141BB707BE}
 		{47F425BB-1D7F-42E4-8234-42EAFD7D6B73} = {FC9F6051-A8CC-437D-8C02-CD141BB707BE}
 		{BDF9D596-4340-40C7-BE1C-207EB7498BAA} = {FC9F6051-A8CC-437D-8C02-CD141BB707BE}
+		{2E0218C7-C4F7-4BC2-929F-CBD5658A1823} = {FC9F6051-A8CC-437D-8C02-CD141BB707BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {577C4948-5050-49FD-A98B-9E143F4C0923}
