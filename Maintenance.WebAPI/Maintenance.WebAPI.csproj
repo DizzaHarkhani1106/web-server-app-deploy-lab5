@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DH_ApiGateway\DH_ApiGateway.csproj" />
+    <ProjectReference Include="..\DH_GlobalExceptionHandler\DH_GlobalExceptionHandler.csproj" />
   </ItemGroup>
 
 </Project>

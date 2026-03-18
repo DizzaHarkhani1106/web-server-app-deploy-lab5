@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Maintenance.WebAPI.Data;
 using System.Collections.Concurrent;
-
+using DH_GlobalExceptionHandler.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<MaintenanceWebAPIContext>(options =>
@@ -49,6 +49,8 @@ var usageCounts = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
 builder.Services.AddSingleton(usageCounts);
 
 var app = builder.Build();
+app.UseGlobalExceptionMiddleware();
+
 
 app.UseSwagger();
 app.UseSwaggerUI();

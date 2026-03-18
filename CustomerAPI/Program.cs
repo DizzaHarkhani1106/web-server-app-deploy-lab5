@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using CustomerAPI.Data;
 using CustomerAPI.Services;
+using DH_GlobalExceptionHandler.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseGlobalExceptionMiddleware();
 
 if (app.Environment.IsDevelopment())
 {

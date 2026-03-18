@@ -1,0 +1,12 @@
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\bin\Debug\net8.0\DH_GlobalExceptionHandler.deps.json
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\bin\Debug\net8.0\DH_GlobalExceptionHandler.dll
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\bin\Debug\net8.0\DH_GlobalExceptionHandler.pdb
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.AssemblyInfoInputs.cache
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.AssemblyInfo.cs
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.csproj.CoreCompileInputs.cache
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.sourcelink.json
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.dll
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\refint\DH_GlobalExceptionHandler.dll
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\DH_GlobalExceptionHandler.pdb
+C:\Users\dizza\source\repos\web-server-app-deploy-lab5\DH_GlobalExceptionHandler\obj\Debug\net8.0\ref\DH_GlobalExceptionHandler.dll

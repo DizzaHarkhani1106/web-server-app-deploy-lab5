@@ -123,6 +123,19 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "DH_GlobalExceptionHandler/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DH_GlobalExceptionHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DH_GlobalExceptionHandler.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -498,10 +511,16 @@
         "yarp.reverseproxy.2.0.1.nupkg.sha512",
         "yarp.reverseproxy.nuspec"
       ]
+    },
+    "DH_GlobalExceptionHandler/1.0.0": {
+      "type": "project",
+      "path": "../DH_GlobalExceptionHandler/DH_GlobalExceptionHandler.csproj",
+      "msbuildProject": "../DH_GlobalExceptionHandler/DH_GlobalExceptionHandler.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "DH_GlobalExceptionHandler >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "Yarp.ReverseProxy >= 2.0.1"
     ]
@@ -533,7 +552,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\DH_GlobalExceptionHandler\\DH_GlobalExceptionHandler.csproj": {
+              "projectPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\DH_GlobalExceptionHandler\\DH_GlobalExceptionHandler.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

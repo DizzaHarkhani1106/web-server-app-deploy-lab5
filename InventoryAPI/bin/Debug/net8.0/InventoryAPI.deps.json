@@ -9,6 +9,7 @@
       "InventoryAPI/1.0.0": {
         "dependencies": {
           "DH_ApiGateway": "1.0.0",
+          "DH_GlobalExceptionHandler": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
@@ -923,6 +924,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "DH_GlobalExceptionHandler/1.0.0": {
+        "runtime": {
+          "DH_GlobalExceptionHandler.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1507,6 +1516,11 @@
       "hashPath": "yarp.reverseproxy.2.0.1.nupkg.sha512"
     },
     "DH_ApiGateway/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DH_GlobalExceptionHandler/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

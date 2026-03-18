@@ -147,5 +147,55 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
+    "Method": "BadRequestTest",
+    "RelativePath": "api/TestException/badrequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
+    "Method": "ConflictTest",
+    "RelativePath": "api/TestException/conflict",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
+    "Method": "NotFoundTest",
+    "RelativePath": "api/TestException/notfound",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
+    "Method": "ServerErrorTest",
+    "RelativePath": "api/TestException/servererror",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
+    "Method": "UnauthorizedTest",
+    "RelativePath": "api/TestException/unauthorized",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
