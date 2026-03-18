@@ -28,11 +28,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\DH_GlobalExceptionHandler\\DH_GlobalExceptionHandler.csproj": {
-                "projectPath": "C:\\Users\\dizza\\source\\repos\\web-server-app-deploy-lab5\\DH_GlobalExceptionHandler\\DH_GlobalExceptionHandler.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

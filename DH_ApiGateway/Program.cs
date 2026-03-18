@@ -1,5 +1,5 @@
 using DH_ApiGateway.Middleware;
-using DH_GlobalExceptionHandler.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +30,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-app.UseGlobalExceptionMiddleware();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
