@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DH_ApiGateway.props" />
-</Project>
