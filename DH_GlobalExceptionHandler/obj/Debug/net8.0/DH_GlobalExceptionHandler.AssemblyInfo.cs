@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DH_GlobalExceptionHandler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f34a00389793477ab7a0b4a0dcf3f9ebcf2185ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40f5ae269171c378785fe039d573604c9a2a0853")]
 [assembly: System.Reflection.AssemblyProductAttribute("DH_GlobalExceptionHandler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DH_GlobalExceptionHandler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

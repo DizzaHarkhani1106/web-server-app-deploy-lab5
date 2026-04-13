@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "Zr2SpIVuHX3xI8mTg0LEdRVTnaB5DD/cBcI84ccn4G0=",
-  "Source": "DH_ApiGateway",
-  "BasePath": "_content/DH_ApiGateway",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"YuMLT6zQJVaaecygN/68oPWfwmKbiDS2JGta74BJNow=","Source":"DH_ApiGateway","BasePath":"_content/DH_ApiGateway","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

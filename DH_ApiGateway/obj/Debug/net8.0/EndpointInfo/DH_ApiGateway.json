@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CarRental API Gateway",
+    "description": "Single entry point for all CarRental microservices with API Key authentication",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/HealthCheck/health": {
+      "get": {
+        "tags": [
+          "HealthCheck"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HealthCheck/info": {
+      "get": {
+        "tags": [
+          "HealthCheck"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HealthCheck/ready": {
+      "get": {
+        "tags": [
+          "HealthCheck"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

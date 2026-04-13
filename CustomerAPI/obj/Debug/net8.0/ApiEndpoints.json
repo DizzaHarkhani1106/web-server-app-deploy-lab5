@@ -119,36 +119,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DH_ApiGateway.Controllers.HealthCheckController",
-    "Method": "GetHealth",
-    "RelativePath": "api/HealthCheck/health",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DH_ApiGateway.Controllers.HealthCheckController",
-    "Method": "GetInfo",
-    "RelativePath": "api/HealthCheck/info",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DH_ApiGateway.Controllers.HealthCheckController",
-    "Method": "IsReady",
-    "RelativePath": "api/HealthCheck/ready",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "CustomerAPI.Controllers.TestExceptionController",
     "Method": "BadRequestTest",
     "RelativePath": "api/TestException/badrequest",
