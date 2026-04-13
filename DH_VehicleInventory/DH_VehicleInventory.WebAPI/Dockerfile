@@ -5,6 +5,7 @@ USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
+
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
@@ -17,10 +18,12 @@ RUN dotnet restore "./DH_VehicleInventory/DH_VehicleInventory.WebAPI/DH_VehicleI
 COPY . .
 WORKDIR "/src/DH_VehicleInventory/DH_VehicleInventory.WebAPI"
 RUN dotnet build "./DH_VehicleInventory.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./DH_VehicleInventory.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false /p:ErrorOnDuplicatePublishOutputFiles=false
+
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
