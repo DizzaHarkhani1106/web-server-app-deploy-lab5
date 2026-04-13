@@ -32,11 +32,8 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 app.UseGlobalExceptionMiddleware();
-if (app.Environment.IsDevelopment())
-{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
 app.UseHttpsRedirection();
 app.UseCors("AllowApiGateway");
