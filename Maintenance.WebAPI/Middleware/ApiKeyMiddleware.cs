@@ -14,7 +14,7 @@ namespace Maintenance.WebAPI.Middleware
         public ApiKeyMiddleware(RequestDelegate next, IConfiguration config)
         {
             _next = next;
-            _apiKey = config.GetValue<string>("ApiKey");
+            _apiKey = config.GetValue<string>("ApiKey") ?? string.Empty;
         }
 
         public async Task InvokeAsync(HttpContext context)

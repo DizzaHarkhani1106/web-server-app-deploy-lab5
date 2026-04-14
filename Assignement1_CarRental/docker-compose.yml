@@ -1,0 +1,96 @@
+services:
+
+  apigateway:
+    build:
+      context: ..
+      dockerfile: DH_ApiGateway/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Release
+    ports:
+      - "5100:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - customerapi
+      - vehicleinventory
+      - maintenanceapi
+    networks:
+      - appnetwork
+
+  customerapi:
+    build:
+      context: ..
+      dockerfile: CustomerAPI/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Release
+    container_name: customerapi
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5200:8080"
+    depends_on:
+      - sqlserver
+    networks:
+      - appnetwork
+
+  vehicleinventory:
+    build:
+      context: ..
+      dockerfile: DH_VehicleInventory/DH_VehicleInventory.WebAPI/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Release
+    container_name: vehicleinventory
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5400:8080"
+    depends_on:
+      - sqlserver
+    networks:
+      - appnetwork
+
+  maintenanceapi:
+    build:
+      context: ..
+      dockerfile: Maintenance.WebAPI/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Release
+    container_name: maintenanceapi
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5300:8080"
+    networks:
+      - appnetwork
+
+  carrental-client:
+    build:
+      context: ..
+      dockerfile: Assignement1_CarRental/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Release
+    container_name: carrental-client
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - apigateway
+    networks:
+      - appnetwork
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=CarRental@2026
+    ports:
+      - "1433:1433"
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge

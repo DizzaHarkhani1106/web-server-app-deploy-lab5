@@ -21,19 +21,33 @@ namespace Assignement1_CarRental.Controllers
         [HttpPost]
         public async Task<IActionResult> History(int vehicleId)
         {
-            var client = _httpClientFactory.CreateClient("MaintenanceApi");
-            var repairs = await client.GetFromJsonAsync<List<RepairHistoryViewModel>>(
-                $"api/maintenance/vehicles/{vehicleId}/repairs");
-            return View(repairs ?? new List<RepairHistoryViewModel>());
+            try
+            {
+                var client = _httpClientFactory.CreateClient("MaintenanceApi");
+                var repairs = await client.GetFromJsonAsync<List<RepairHistoryViewModel>>(
+                    $"api/repairhistory/vehicles/{vehicleId}");
+                return View(repairs ?? new List<RepairHistoryViewModel>());
+            }
+            catch
+            {
+                return View(new List<RepairHistoryViewModel>());
+            }
         }
 
 
         [HttpGet]
         public async Task<IActionResult> Usage()
         {
-            var client = _httpClientFactory.CreateClient("MaintenanceApi");
-            var result = await client.GetFromJsonAsync<UsageViewModel>("api/RepairHistory/usage");
-            return View(result);
+            try
+            {
+                var client = _httpClientFactory.CreateClient("MaintenanceApi");
+                var result = await client.GetFromJsonAsync<UsageViewModel>("api/repairhistory/usage");
+                return View(result ?? new UsageViewModel());
+            }
+            catch
+            {
+                return View(new UsageViewModel());
+            }
         }
     }
 }
