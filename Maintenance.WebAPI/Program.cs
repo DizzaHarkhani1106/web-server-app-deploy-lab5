@@ -1,15 +1,7 @@
 ﻿using Maintenance.WebAPI.Services;
-using Microsoft.EntityFrameworkCore;
-using Maintenance.WebAPI.Data;
 using System.Collections.Concurrent;
 using DH_GlobalExceptionHandler.Extensions;
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddDbContext<MaintenanceWebAPIContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("MaintenanceWebAPIContext")
-        ?? throw new InvalidOperationException("Connection string not found.")
-    ));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
